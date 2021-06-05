@@ -20,14 +20,14 @@ body {
   width: 100vw;
 }
 
-.main__container {
+.newsletter {
   background-color: var(--blue-ribbon);
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.slogan__container {
+.slogan {
   background-image: url("assets/Pattern.png");
   color: var(--white);
   display: flex;
@@ -38,7 +38,7 @@ body {
   padding: 2.5rem;
   text-align: center;
 }
-.content__container {
+.popup {
   background-color: var(--white);
   display: flex;
   flex: 2;
@@ -46,42 +46,12 @@ body {
   justify-content: space-evenly;
   padding: 1rem;
 }
-
-@media only screen and (min-width: 720px) {
-  body {
-    background-image: url("./Assets/Background.png");
-  }
-
-  .main__container {
-    align-self: center;
-    justify-self: center;
-    width: 55%;
-    height: 70%;
-    border-radius: 0.3rem;
-  }
-
-  .slogan__container {
-    border-radius: 0.3rem;
-  }
-
-  .content__container {
-    border-radius: 0.3rem;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .main__container {
-    width: 45%;
-    height: 70%;
-  }
-}
-
-.subscribe__container {
+.popup__subscribe-container {
   display: flex;
   justify-content: space-between;
 }
 
-.subscribe__input {
+.popup__subscribe-input {
   background-color: var(--catskill-white);
   border: 1px solid var(--silver-chalice);
   border-radius: 4px;
@@ -92,15 +62,15 @@ body {
   padding-left: 0.5rem;
   width: 100%;
 }
-.subscribe__input:focus {
+.popup__subscribe-input:focus {
   outline-style: none;
   background-color: var(--catskill-white);
 }
 
-.subscribe__button {
+.popup__subscribe-button {
   background-color: var(--blue-ribbon);
   border-radius: 4px;
-  border: 0px;
+  border: 0;
   color: var(--white);
   cursor: pointer;
   height: 2.5rem;
@@ -108,31 +78,31 @@ body {
   padding: 0.25rem 0.5rem;
 }
 
-.subscribe__button:hover {
+.popup__subscribe-button:hover {
   filter: brightness(0.95);
   outline: none;
 }
-.promise__text {
+.popup__promise-text {
   color: var(--silver-chalice);
   font-weight: 400;
   font-size: 0.8rem;
 }
 
-.introduction__text,
-.feedback__text {
+.popup__introduction-text,
+.popup__feedback-text {
   color: var(--dove-gray);
   font-weight: 400;
   font-size: 0.875rem;
   text-align: center;
 }
 
-.customer__container {
+.customer-container {
   display: flex;
   justify-content: center;
   margin: 0.5rem;
 }
 
-.customer-details__container {
+.customer-container__details {
   align-content: center;
   display: flex;
   flex-direction: column;
@@ -140,7 +110,38 @@ body {
   padding-left: 0.5rem;
 }
 
-.customer-details__role {
+.customer-container__role {
   color: var(--silver-chalice);
   font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 720px) {
+  body {
+    background-image: url("./Assets/Background.png");
+    background-size: cover;
+    background-repeat: 0;
+  }
+
+  .newsletter {
+    align-self: center;
+    justify-self: center;
+    width: 55%;
+    height: 70%;
+    border-radius: 0.3rem;
+  }
+
+  .slogan {
+    border-radius: 0.3rem;
+  }
+
+  .popup {
+    border-radius: 0.3rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .newsletter {
+    width: 45%;
+    height: 70%;
+  }
 }
